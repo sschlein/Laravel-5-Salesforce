@@ -1,7 +1,7 @@
 {
     "name": "etelford/laravel-salesforce",
-    "description": "Laravel 4 Salesforce Force.com PHP Toolkit port (using this instead of official version for Laravel 5 development",
-    "keywords": ["laravel", "salesforce", "crm", "force.com toolkit", "laravel 4 (dev)"],
+    "description": "Laravel 5 Salesforce Force.com PHP Toolkit port (using this instead of official version for Laravel 5 development",
+    "keywords": ["laravel", "salesforce", "crm", "force.com toolkit", "laravel 5"],
     "license" : "MIT",
     "authors": [
         {
