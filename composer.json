@@ -1,12 +1,12 @@
 {
-    "name": "davispeixoto/laravel-salesforce",
-    "description": "Laravel 4 Salesforce Force.com PHP Toolkit port",
-    "keywords": ["laravel", "salesforce", "crm", "force.com toolkit", "laravel 4"],
+    "name": "etelford/laravel-salesforce",
+    "description": "Laravel 4 Salesforce Force.com PHP Toolkit port (using this instead of official version for Laravel 5 development",
+    "keywords": ["laravel", "salesforce", "crm", "force.com toolkit", "laravel 4 (dev)"],
     "license" : "MIT",
     "authors": [
         {
-            "name": "Davis Peixoto",
-            "email": "davis.peixoto@gmail.com"
+            "name": "Erik Telford",
+            "email": "e@eriktelford.net"
         }
     ],
     "require": {
