@@ -11,6 +11,13 @@ class LaravelSalesforceServiceProvider extends ServiceProvider {
 	 */
 	protected $defer = false;
 
+	public function boot()
+	{
+		$this->publishes([
+		    __DIR__.'/../../config/config.php' => config_path('salesforce.php'),
+		]);
+	}
+
 	/**
 	 * Register the service provider.
 	 *
@@ -18,14 +25,18 @@ class LaravelSalesforceServiceProvider extends ServiceProvider {
 	 */
 	public function register()
 	{	
+		$this->mergeConfigFrom(
+		    __DIR__.'/../../config/config.php', 'salesforce'
+		);
+
 		$this->app->booting(function() {
 			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
 			$loader->alias('Salesforce', 'Davispeixoto\LaravelSalesforce\Facades\Salesforce');
 			$loader->alias('SF', 'Davispeixoto\LaravelSalesforce\Facades\Salesforce');
 		});
-		
-		$this->app['salesforce'] = $this->app->share(function($app) {
-			return new Salesforce($app['config']);
+
+		$this->app->bindShared('salesforce', function($app) {
+			return new Salesforce();
 		});
 	}
 
