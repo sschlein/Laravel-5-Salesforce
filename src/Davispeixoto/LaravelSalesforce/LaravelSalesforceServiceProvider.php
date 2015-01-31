@@ -29,12 +29,6 @@ class LaravelSalesforceServiceProvider extends ServiceProvider {
 		    __DIR__.'/../../config/config.php', 'salesforce'
 		);
 
-		$this->app->booting(function() {
-			$loader = \Illuminate\Foundation\AliasLoader::getInstance();
-			$loader->alias('Salesforce', 'Davispeixoto\LaravelSalesforce\Facades\Salesforce');
-			$loader->alias('SF', 'Davispeixoto\LaravelSalesforce\Facades\Salesforce');
-		});
-
 		$this->app->bindShared('salesforce', function($app) {
 			return new Salesforce();
 		});

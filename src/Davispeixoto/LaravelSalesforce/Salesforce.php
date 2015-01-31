@@ -3,6 +3,7 @@
 use Davispeixoto\ForceDotComToolkitForPhp\SforceEnterpriseClient as Client;
 
 class Salesforce {
+	
 	public $sfh;
 	
 	public function __construct()
