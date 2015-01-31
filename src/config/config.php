@@ -1,5 +1,5 @@
 <?php
-return array(
+return [
 
     /*
     |--------------------------------------------------------------------------
@@ -21,4 +21,4 @@ return array(
 //    'password' => '',
 //    'token' => '',
 //    'wsdl' => app_path() . '/wsdl/enterprise.sandbox.wsdl.xml',
-);
+];

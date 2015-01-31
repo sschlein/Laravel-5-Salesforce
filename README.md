@@ -1,7 +1,7 @@
-Laravel 4 Salesforce
+Laravel 5 Salesforce
 ====================
 
-This Laravel 4 package provides an interface for using [Salesforce CRM](http://www.salesforce.com/) API.
+This Laravel 5 package provides an interface for using [Salesforce CRM](http://www.salesforce.com/) API.
 
 Installation
 ------------
@@ -9,7 +9,7 @@ Installation
 Begin by installing this package through Composer. Edit your project's `composer.json` file to require `davispeixoto/laravel-salesforce`.
 
     "require": {
-        "laravel/framework": "5.0.*@dev",
+        "laravel/framework": "5.0",
         "etelford/laravel-salesforce": "2.0.0"
     }
 

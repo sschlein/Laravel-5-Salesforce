@@ -12,16 +12,6 @@ class LaravelSalesforceServiceProvider extends ServiceProvider {
 	protected $defer = false;
 
 	/**
-	 * Bootstrap the application events.
-	 *
-	 * @return void
-	 */
-	public function boot()
-	{
-		$this->package('davispeixoto/laravel-salesforce');
-	}
-
-	/**
 	 * Register the service provider.
 	 *
 	 * @return void
@@ -46,7 +36,7 @@ class LaravelSalesforceServiceProvider extends ServiceProvider {
 	 */
 	public function provides()
 	{
-		return array('salesforce');
+		return ['salesforce'];
 	}
 
 }
