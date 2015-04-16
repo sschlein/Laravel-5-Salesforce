@@ -11,7 +11,7 @@ class Salesforce {
 		try {
 			$this->sfh = new Client();
 
-            $wsdl = config('salesforce.wsdl');
+            $wsdl = env('SALESFORCE_WSDL', app_path() . '/wsdl/enterprise.wsdl.xml');
 
             if (empty($wsdl)) {
                 $wsdl = __DIR__.'/Wsdl/enterprise.wsdl.xml';
@@ -19,7 +19,7 @@ class Salesforce {
 
 			$this->sfh->createConnection($wsdl);
 
-			$this->sfh->login(config('salesforce.username') , config('salesforce.password') . config('salesforce.token'));
+			$this->sfh->login(env('SALESFORCE_USER', ''), env('SALESFORCE_PASSWORD', '') . env('SALESFORCE_TOKEN', ''));
 			return $this;
 		} catch (Exception $e) {
 			Log::error($e->getMessage());
