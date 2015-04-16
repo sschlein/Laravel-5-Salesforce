@@ -10,15 +10,15 @@ return [
     */
 
     // production
-    'username'    => '',
-	'password' => '',
-	'token' => '',
+    'username'    => env('SALESFORCE_USER', ''),
+	'password' => env('SALESFORCE_PASSWORD', ''),
+	'token' => env('SALESFORCE_TOKEN', ''),
     'wsdl' => app_path() . '/wsdl/enterprise.wsdl.xml',
 
 
 //    sandbox
-//    'username'    => '',
-//    'password' => '',
-//    'token' => '',
+//	  'username'    => env('SALESFORCE_USER', ''),
+//	  'password' => env('SALESFORCE_PASSWORD', ''),
+//	  'token' => env('SALESFORCE_TOKEN', ''),
 //    'wsdl' => app_path() . '/wsdl/enterprise.sandbox.wsdl.xml',
-];
+];;
